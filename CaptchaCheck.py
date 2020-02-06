@@ -8,6 +8,7 @@ import random
 #for using reduce function
 import functools
 
+CAPTCHA_LENGTH = 5 # define a length for the captch phrase
 #Returns true if given two lists are same 
 def checkCaptcha(captcha, user_captcha):
   #sort the lists of characters or numerics before comparing
@@ -34,9 +35,9 @@ def generateCaptcha(n):
 #Invocation, generation, comparision code in main method 
 def main():
 
-  #Generate a random CAPTCHA
+  #Generate a random CAPTCHA of fxed length, CAPTCHA_LENGTH
 	str1 = ""
-	captcha = generateCaptcha(5)
+	captcha = generateCaptcha(CAPTCHA_LENGTH)
 	for ele in captcha:
 		str1 += ele
 	print("Generated captcha is " + str1 )
